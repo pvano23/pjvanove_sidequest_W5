@@ -15,6 +15,9 @@ class WorldLevel {
     // Generate random stars for the night sky across entire world
     this.stars = this.generateStars(300);
     
+    // Generate yellow swirls for atmosphere
+    this.swirls = this.generateSwirls(80);
+    
     // Generate 5 large prominent yellow stars
     this.largeStars = this.generateLargeStars(5);
     
@@ -46,6 +49,22 @@ class WorldLevel {
       });
     }
     return stars;
+  }
+  
+  generateSwirls(count) {
+    let swirls = [];
+    for (let i = 0; i < count; i++) {
+      swirls.push({
+        x: random(this.w),
+        y: random(this.h),
+        radius: random(8, 20),
+        opacity: random(40, 100),
+        speed: random(0.01, 0.025),
+        rotation: random(TWO_PI),
+        tightness: random(8, 14)
+      });
+    }
+    return swirls;
   }
   
   generateLargeStars(count) {
@@ -105,6 +124,28 @@ class WorldLevel {
     noStroke();
     fill(25, 20, 80);
     rect(0, 0, this.w, this.h);
+    
+    // Draw yellow swirls for atmosphere and escapism
+    for (const swirl of this.swirls) {
+      push();
+      translate(swirl.x, swirl.y);
+      rotate(frameCount * swirl.speed + swirl.rotation);
+      
+      noFill();
+      stroke(255, 220, 100, swirl.opacity);
+      strokeWeight(1.5);
+      
+      // Draw tight spiral swirl pattern
+      beginShape();
+      for (let i = 0; i < TWO_PI; i += 0.15) {
+        let x = cos(i) * swirl.radius * sin(i / TWO_PI * swirl.tightness);
+        let y = sin(i) * swirl.radius * sin(i / TWO_PI * swirl.tightness);
+        vertex(x, y);
+      }
+      endShape();
+      
+      pop();
+    }
 
     // Draw regular twinkling stars
     for (const star of this.stars) {
@@ -288,8 +329,8 @@ class WorldLevel {
 
   drawHUD(player, camX, camY) {
     noStroke();
-    fill(20);
-    text("Example 4 — JSON world + smooth camera (lerp).", 12, 20);
+    fill(255, 255, 255);
+    text("The Star-Filled Experience", 12, 20);
     text(
       "camLerp(JSON): " +
         this.camLerp +
