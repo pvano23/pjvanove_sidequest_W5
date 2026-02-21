@@ -13,7 +13,7 @@ class WorldLevel {
     this.camLerp = json.camera?.lerp ?? 0.12;
     
     // Generate random stars for the night sky across entire world
-    this.stars = this.generateStars(300);
+    this.stars = this.generateStars(500);
     
     // Generate yellow swirls for atmosphere
     this.swirls = this.generateSwirls(80);

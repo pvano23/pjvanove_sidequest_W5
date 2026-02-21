@@ -1,22 +1,17 @@
 ## Project Title
 
-Side Quest #4 Build another level using arrays and use loops to create obstacles.
----
+Side Quest #5 have the camera create an experience scrolling through the game, for this game players should feel a sense of escapism from their current environment. 
 
 ## Description
 
-This blob game is changed get your mind thinking in a strategic way. Your character (the blob) has to go through two levels but to advance to the next level you must avoid rolling obstacles if you get hit you lose a life. You are given three each level. If you can complete level one by going through the mysterious black wall, level two requires you to ensure the blob makes it across the platforms before time runs out. When the timer hits zero you lose a life. The game continues to loop back to level one allowing you to play for as long as you desire. 
+Take a seat and enjoy moments of escapism through a Star-Filled Night, work your way through this experience as you go through thethe night you will unveil objects in the sky.
+---
 
 ---
 
 ## Interaction Instructions
 
-User can move the block left/right using A/D or left/right arrows. user can jump using Spacebar, W or up arrow. Some important notes to remember blob starts with three lives per level (visual indivator are the tally hearts at the bottom left)
-
-In Level 1 try to avoid the rolling cacti obstacles while jumping acorss platforms. To get to the next level have the blob reach the black wall at the top right. 
-
-In Level 2 get through the platforms under 10-seconds or lose a life once the timer hits zero. reach the top right black wall to complete the game and loop back to level 1.
-
+User can move the white camera up/down side to side using the keyboard arrows to scroll through the Star-Filled Night. User will find five large yellow stars throughout the game ensure user is using the full screen to find these stars. 
 
 ---
 
