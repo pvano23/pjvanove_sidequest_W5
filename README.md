@@ -4,7 +4,7 @@ Side Quest #5 have the camera create an experience scrolling through the game, f
 
 ## Description
 
-Take a seat and enjoy moments of escapism through a Star-Filled Night, work your way through this experience as you go through thethe night you will unveil objects in the sky.
+Take a seat and enjoy moments of escapism through a Star-Filled Night, work your way through this experience as you go through the night you will unveil objects in the sky.
 ---
 
 ---
